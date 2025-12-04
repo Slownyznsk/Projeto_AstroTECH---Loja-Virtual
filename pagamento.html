@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - AstroTECH</title>
+    <link rel="stylesheet" href="pagamento.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+<section class="container">
+    <header><h1>Pagamento</h1></header>
+
+    <main>
+        
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2>Dados do Comprador</h2> <button id="btnVoltar"><a href="index.html" style="text-decoration: none; color: #000;">Voltar</a> </button>
+        </div>
+
+        <form id="formPagamento" class="form-pagamento">
+
+            <label>Nome Completo:</label>
+            <input type="text" id="nome" required>
+
+            <label>CEP:</label>
+            <input type="text" id="cep" required>
+
+            <div id="freteInfo" style="margin-top:10px; font-weight:600;">
+                Frete: R$ <span id="valorFrete">0,00</span>
+            </div>
+
+            <div id="totalFinalInfo" style="margin-top:10px; font-weight:600;">
+                Total Final: R$ <span id="totalFinal">0,00</span>
+            </div>
+
+            <label>Método de Pagamento:</label>
+            <select id="metodoPagamento" required>
+                <option value="cartao">Cartão</option>
+                <option value="qr">QR Code</option>
+            </select>
+
+            <div id="areaCartao" class="area-cartao">
+                <label>Número do Cartão:</label>
+                <input type="text" id="numeroCartao">
+
+                <label>Validade (MM/AA):</label>
+                <input type="text" id="validadeCartao">
+
+                <label>CVV:</label>
+                <input type="text" id="cvvCartao">
+            </div>
+
+            <div id="areaQR" style="display:none; margin-top:20px; text-align:center;">
+                <p style="margin-top:20px;">QR Gerado:</p>
+                <img id="qrImagem" src="" style="width:220px; display:block; margin:auto;">
+                <button type="button" id="btnCopiarQR" style="margin-top:10px;">Copiar código</button>
+            </div>
+
+            <button type="submit">Finalizar Compra</button>
+        </form>
+
+    </main>
+</section>
+
+<script src="pagamento.js"></script>
+
+</body>
+</html>

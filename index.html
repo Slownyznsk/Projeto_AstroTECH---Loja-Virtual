@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroTECH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+<section class="container">
+    <header>
+        <h1>AstroTECH</h1>
+
+        <button id="login" class="login">
+        <img src="imgs/icons/user-icon.avif" alt="ícone de usuário">
+        </button>
+
+        <p id="usuarioLogado"></p>
+
+        <div id="formCadastro" class="form-cadastro" aria-hidden="true">
+        <form class="conteudo" onsubmit="return false;">
+            <h3>Cadastro/Login</h3>
+            <label>Nome Completo:</label>
+            <input type="text" id="nome" required>
+
+            <label>Data de Nascimento:</label>
+            <input type="text" id="nascimento" required>
+
+            <label>E-mail</label>
+            <input type="email" id="email" required>
+
+            <label>Senha:</label>
+            <input type="password" id="senha" required>
+
+            <div class="botoes-cadstro">
+
+            <button type="button" id="btnCadastrar">Confirmar</button>
+            <button type="button" id="btnFechar">Fechar</button>
+            </div>
+        </form>
+        </div>
+
+        <div id="menuPerfil" aria-hidden="true">
+        <p id="perfilNome"></p>
+        <button id="btnLogout">Logout</button>
+        </div>
+
+        <nav>   
+                <a href="produtos.html">Produtos <img src="imgs/icons/produtos.png" alt="Produtos"> </a>
+                <a href="#empresa">Sobre Nós <img src="imgs/icons/contato.png" alt="Sobre Nós"></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsdHHVnNsMxLhmRqDSdnBdxCQfsKShwCszMvZPfDHBpZJxWjDxMFmdrNPJSlWRcKFbjdVnsV" target="_blank">Contato <img src="imgs/icons/email.png" alt="Contato"></a>
+                <button id="carrinho1" class="carrinho-button">Carrinho <img src="imgs/icons/carrinho.png" alt="Carrinho"></button>
+        </nav>
+    </header>
+
+    <main>
+      
+        <div class="carrinho-menu" id="carrinho">
+            <h2>Seus produtos</h2>
+            <div id="itensCarrinho"></div>
+            <p id="total">Total: R$ 0,00</p>
+            <button id="btnPagar" class="pagamento-btn">Ir para Pagamento</button>
+            <button id="fecharCarrinho" class="carrinho-fechar-btn" style="margin-top:auto;">Fechar</button>
+        </div>
+
+        <h1>Produtos</h1>
+
+        <section class="products" id="produtos">      
+
+            <div class="product">
+                <img src="imgs/produtos/nucleo_energia2.png" alt="Produto 1">
+                <h3>Núcleo de Energia</h3>
+                <p class="price">R$ 2.900.000,00</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="imgs/produtos/chip_kaiju.png" alt="Produto 2">
+                <h3>Chip de Memória</h3>
+                <p class="price">R$ 3.500.000,00</p>
+                <button id="produto2">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <img src="imgs/produtos/chip_combate.png" alt="Produto 3">
+                <h3>Chip de Combate Avançado</h3>
+                <p class="price">R$ 3.200.000,00 </p>
+                <button id="produto3">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="imgs/produtos/cabos.png" alt="Produto 4">
+                <h3>Cabos de Energia e Fluido</h3>
+                <p class="price">R$ 1.100.000,00 </p>
+                <button id="produto4">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="imgs/produtos/espada.png" alt="Produto 5">
+                <h3>Raikjin One</h3>
+                <p class="price">R$ 2.800.000,00</p>
+                <button id="produto5">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <img src="imgs/produtos/combustivel.png" alt="Produto 6">
+                <h3>Biocombustível</h3>
+                <p> (Abastecimento completo) </p>
+                <p class="price">R$ 1.000.000</p>
+                <button id="produto6">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="imgs/produtos/arma.png" alt="Produto 7">
+                <h3>Experimento 19-B</h3>
+                <p class="price">R$ 3.500.000</p>
+                <button id="produto7">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="imgs/produtos/traje.png" alt="Produto 8">
+                <h3>Traje de Controle</h3>
+                <p class="price">R$ 1.500.000</p>
+                <button id="produto8">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <img src="imgs/produtos/warden_armor.png" alt="Produto 9">
+                <h3>Warden Aluegine</h3>
+                <p class="price">R$ 3.800.000</p>
+                <button id="produto9">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="imgs/produtos/lateral_robô.png" alt="Produto 10">
+                <h3>Partes Superiores</h3>
+                <p class="price">R$ 10.000.000</p>
+                <button id="produto10">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <img src="imgs/produtos/robozão_inferior.png" alt="Produto 11">
+                <h3>Partes Inferioes</h3>
+                <p class="price">R$ 10.000.000</p>
+                <button id="produto11">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <img src="imgs/produtos/robozão_frente.png" alt="Produto 12">
+                <h3>AstroMECHA</h3>
+                <p class="price">R$ 60.000.000,00</p>
+                <button id="produto12">Adicionar ao Carrinho</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="info1" id="sobre">
+         <section class="transkaiju" id="transkaiju">
+            <h2>AstroMECHA</h2>
+                <p>Projetado para combates extremos e inteligência estratégica, o AstroMECHA é a fusão perfeita entre engenharia humana e instinto kaiju. Com estrutura modular e peças intercambiáveis, ele pode ser adquirido por partes — ideal para personalização — ou em sua versão completa, pronto para ação.
+                Cada componente foi desenvolvido com foco em durabilidade, performance e estética futurista. Do núcleo cerebral kaiju às placas de armadura reforçada, o AstroMECHA representa o ápice da tecnologia híbrida.
+                Escolha sua configuração:
+                <ul>
+                    <li>Peças individuais para montagem personalizada</li>
+                    <li>Kits de upgrade para performance avançada</li>
+                    <li>Versão completa com sistema de combate integrado</li>
+                </ul>
+            </p>
+        </section>
+    </div>
+    <div class="info2">
+        <section class="empresa" id="empresa">
+            <h2>Sobre Nós</h2>
+            <p>Na AstroTech, o futuro das compras ganha forma em um universo onde ciência e imaginação caminham lado a lado. Inspirada pela exploração espacial e pela engenharia de ponta, nossa plataforma oferece produtos com design inovador e funcionalidades digitais que transportam o usuário para uma experiência além do comum. Cada detalhe foi pensado para criar um ambiente moderno, intuitivo e envolvente — onde tecnologia não é apenas ferramenta, mas parte da jornada. Aqui, cada clique é um passo rumo ao amanhã, e cada interação reflete o compromisso da AstroTech em transformar inovação em prática acessível e inspiradora.</p>
+        </section>
+        
+    </div>
+        <footer id="contato">
+            <p>&copy; 2025 AstroTECH. Todos os direitos reservados. - contato@astrotech.com | (11) 99991-9999</p> 
+        </footer> 
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
