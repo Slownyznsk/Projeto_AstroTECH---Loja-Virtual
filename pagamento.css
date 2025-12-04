@@ -74,3 +74,114 @@
         .area-cartao label {
             font-weight: bold;
         }
+
+/* Tablets e telas médias */
+@media (max-width: 768px) {
+
+    main {
+        padding: 20px;
+        max-width: 500px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        padding: 15px;
+    }
+
+    .form-pagamento input,
+    .form-pagamento select {
+        font-size: 15px;
+        padding: 9px;
+    }
+
+    .form-pagamento button {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    #btnVoltar {
+        padding: 9px;
+        font-size: 15px;
+    }
+
+    .area-cartao {
+        gap: 10px;
+        padding: 12px;
+    }
+}
+
+/* Smartphones padrão */
+@media (max-width: 480px) {
+
+    main {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    header h1 {
+        font-size: 24px;
+        padding: 12px;
+    }
+
+    .form-pagamento label {
+        font-size: 15px;
+    }
+
+    .form-pagamento input,
+    .form-pagamento select {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-pagamento button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    #btnVoltar {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .area-cartao {
+        padding: 10px;
+        gap: 8px;
+    }
+}
+
+/* Smartphones muito pequenos */
+@media (max-width: 360px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .form-pagamento label {
+        font-size: 14px;
+    }
+
+    .form-pagamento input,
+    .form-pagamento select {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    .form-pagamento button {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    #btnVoltar {
+        font-size: 13px;
+        padding: 7px;
+    }
+
+    .area-cartao {
+        gap: 7px;
+        padding: 8px;
+    }
+}
